@@ -1,0 +1,41 @@
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 40px;
+}
+.dashboard h1{
+    color: #ff8c00;
+}
+.dashboard h2{
+    color: #ff8c00;
+    margin-bottom: 0;
+}
+
+#showEvent{
+    background-color: black;
+    color: white;
+    padding: 40px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: black;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+td {
+    background-color: #f2f2f2;
+    text-align: center;
+}

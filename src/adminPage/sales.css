@@ -1,0 +1,56 @@
+#filter {
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-top: 5px;
+  }
+
+  .FormCard {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    padding: 30px 30px 30px 60px;
+    max-width: 700px;
+    font-family: Arial, sans-serif;
+    font-size: mediun;
+  }
+
+  .FormCard > h1{
+    color: #ff7400;
+    margin-bottom: 20px;
+  }
+  
+  .FormCard > h2{
+    margin-top: 40px;
+  }
+
+  table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 16px;
+  }
+
+  .username-cell{
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .total-cell {
+    text-align: right;
+  }
+
+  #generateReport-button{
+    font-size: medium;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #ff6b04;
+    color: white;
+  }
+  
+  #generateReport-button:hover {
+    background-color: #cb5604;
+    cursor: pointer;
+  }

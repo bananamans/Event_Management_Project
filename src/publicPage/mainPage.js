@@ -1,11 +1,3 @@
-Loggedin = false;
-if (!Loggedin) {
-  document.getElementById("navProfilePic").innerHTML =
-    '<a href="login.html">Login</a>';
-}
-document.getElementById("logo").addEventListener("click", () => {
-  window.location.href = "index.html";
-});
 
 const dotsContainer = document.querySelector(".carousel-dots");
 let timer;
@@ -13,7 +5,7 @@ let timer;
 function startCarouselTimer() {
   timer = setInterval(() => {
     handleCarouselNavigation("next");
-  }, 5000);
+  }, 3000);
 }
 
 function stopCarouselTimer() {

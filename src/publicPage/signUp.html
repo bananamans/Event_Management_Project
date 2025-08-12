@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../SignForm.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c55c2b3c60.js" crossorigin="anonymous"></script>
+    <title>Techvent</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navLeft">
+        <img src="../images/favicon.png" alt="logo" id="logo" />
+        <div class="navItem"><a href="../index.html">Home</a></div>
+        <div class="navItem"><a href="../search.php">Search</a></div>
+        <div class="navItem">
+          <a href="../seminarForm.php">Booking</a>
+          <ul class="subMenu">
+            <li><a href="../seminarForm.php" id="topItem">Seminar</a></li>
+            <li><a href="../privateEventForm.php">Private Event</a></li>
+          </ul>
+        </div>
+        <div class="navItem"><a href="about.html">About</a></div>
+      </div>
+      <div class="navRight">
+        <div id="navProfilePic"></div>
+      </div>
+    </div>
+    <div class="breakSpace"></div>
+    <div class="signFormContainer">
+      <h1>Sign Up</h1>
+      <div>
+        <form class="signForm" action="signUp.php" method="post">
+          <div class="formGroup" id="signup-name">
+            <label for="fullName">Full Name</label>
+            <br />
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              maxlength="30"
+              oninput="resetValidity('fullName')"
+              required
+            />
+          </div>
+          <div class="formGroup">
+            <label for="password">Password</label>
+            <br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              maxlength="20"
+              oninput="resetValidity('password')"
+              required
+            />
+            <span class="togglePassword signup" onclick="togglePasswordVisibility()">
+              <i class="fas fa-eye" id="togglePasswordIcon"></i>
+          </span>
+          </div>
+          <div class="formGroup">
+            <label for="confirm-password">Re-enter Password</label>
+            <br />
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              maxlength="20"
+              oninput="resetValidity('confirm-password')"
+              required
+            />
+            <span class="togglePassword signup" onclick="toggleConfirmPasswordVisibility()">
+              <i class="fas fa-eye" id="togglePasswordIcon"></i>
+          </span>
+          </div>
+          <div class="formGroup">
+            <label for="email">Email</label>
+            <br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              maxlength="30"
+              oninput="resetValidity('email')"
+              required
+            />
+          </div>
+          <button class="submit" type="submit" onclick="verifySignup(event)">
+            Sign up
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="changeIcon.js"></script>
+    <script src="signUp.js"></script>
+  </body>
+</html>

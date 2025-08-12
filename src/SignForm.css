@@ -1,10 +1,10 @@
 .signFormContainer {
   margin: auto;
   padding: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 35px;
   width: 30%;
   background-color: black;
-  border-radius: 5px;
+  border-radius: 12px;
   color: white;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .signForm {
-  font-size: large;
+  font-size: 18px;
   margin-left: 40px;
 }
 
@@ -34,6 +34,28 @@
   width: 60%;
   font-size: medium;
   text-indent: 5px;
+}
+
+.formGroup {
+  position: relative;
+}
+
+.togglePassword {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.togglePassword i {
+  color: grey;
+}
+
+.signup{
+  top: 50% !important;
+  right: 175px !important;
+  font-size: small;
 }
 
 .submit {
@@ -57,6 +79,14 @@
   text-indent: 10px !important;
 }
 
+#login-name, #signup-name{
+  margin-bottom: 20px;
+}
+
+#fullName {
+  margin-bottom: 0;
+}
+
 .loginInput::placeholder {
   font-size: medium;
   color: #797474;
@@ -78,11 +108,60 @@
   background-color: #cb5604;
 }
 
-#create-account {
+.errorText {
+  color: red;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+#create-account, #admin-login-text  {
   font-size: 16px;
   color: #ff9e5b;
 }
 
-#create-account:hover {
+#create-account:hover, #admin-login-text:hover {
   color: #cf7d45;
+}
+
+#edit-profile-form{
+  padding-bottom: 20px;
+}
+
+#newName,
+#newEmail,
+#oldPassword,
+#newPassword,
+#saveBtn {
+  width: 80% !important;
+  margin-top: 5px;
+  padding: 2px 0;
+}
+
+#saveBtn{
+  margin-top: 8px !important;
+  padding: 10px;
+}
+
+#upload-photo{
+  margin-left: 45px;
+}
+
+#upload-photo input:hover{
+  cursor: pointer;
+}
+
+#upload{
+  margin-top: 22px;
+  font-size: medium;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff6b04;
+  color: white;
+}
+
+#upload:hover {
+  cursor: pointer;
+  background-color: #cb5604;
 }

@@ -29,7 +29,7 @@
   margin-bottom: 20px;
 }
 
-#fullname,
+#event-name,
 #select-country,
 #contact-number,
 #start-date,
@@ -37,12 +37,19 @@
 #start-time,
 #end-time,
 #venue,
-#budget {
+#guest {
   box-sizing: border-box;
   border-radius: 4px;
   padding-bottom: 8px;
   padding: 4px;
-  font-size: small;
+  font-size: 14px;
+}
+
+#start-date,
+#end-date,
+#start-time,
+#end-time {
+  font-size: small !important;
 }
 
 #contact-number {
@@ -56,13 +63,18 @@
 .service-title {
   box-sizing: border-box;
   padding: 0;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
   font-size: large;
 }
 
 #select-box {
-  padding: 3px;
-  font-size: 15px;
+  padding: 8px 0 8px 5px;
+  font-size: 14px;
+}
+
+.service-item{
+  margin-bottom: 5px;
+  font-size: medium;
 }
 
 #book-button {
@@ -75,7 +87,7 @@
 
 .submit {
   font-size: medium;
-  padding: 8px 20px 8px 20px;
+  padding: 10px 20px 10px 20px;
   margin-top: 20px;
   border: none;
   border-radius: 7px;

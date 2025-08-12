@@ -1,0 +1,12 @@
+.title{
+    margin: auto;
+    text-align: center;
+}
+
+#chart {
+    margin: auto;
+    height: 40%;
+    width: 80%;
+    text-align: center;
+    color: black;
+}

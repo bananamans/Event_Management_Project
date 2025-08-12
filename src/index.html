@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/images/favicon.png" />
+    <link rel="icon" href="images/favicon.png" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mainPage.css" />
+    <link rel="stylesheet" href="publicPage/mainPage.css" />
     <script
       src="https://kit.fontawesome.com/c55c2b3c60.js"
       crossorigin="anonymous"
@@ -19,15 +19,15 @@
       <div class="navLeft">
         <img src="images/favicon.png" alt="logo" id="logo" />
         <div class="navItem"><a href="index.html">Home</a></div>
-        <div class="navItem"><a href="search.html">Search</a></div>
+        <div class="navItem"><a href="search.php">Search</a></div>
         <div class="navItem">
-          <a href="seminarForm.html">Booking</a>
+          <a href="seminarForm.php">Booking</a>
           <ul class="subMenu">
-            <li><a href="seminarForm.html" id="topItem">Seminar</a></li>
-            <li><a href="privateEventForm.html">Private Event</a></li>
+            <li><a href="seminarForm.php" id="topItem">Seminar</a></li>
+            <li><a href="privateEventForm.php">Private Event</a></li>
           </ul>
         </div>
-        <div class="navItem"><a href="about.html">About</a></div>
+        <div class="navItem"><a href="publicPage/about.html">About</a></div>
       </div>
       <div class="navRight">
         <div id="navProfilePic"></div>
@@ -36,9 +36,9 @@
     <div class="breakSpace"></div>
     <!-- content -->
     <div class="carousel">
-      <img src="images/p1.jpg" class="carousel-image active" data-index="0" />
-      <img src="images/p2.jpg" class="carousel-image" data-index="1" />
-      <img src="images/p3.jpg" class="carousel-image" data-index="2" />
+      <img src="images/p2.jpg" class="carousel-image active" data-index="0" />
+      <img src="images/p3.jpg" class="carousel-image" data-index="1" />
+      <img src="images/p1.jpg" class="carousel-image" data-index="2" />
       <button class="carousel-btn carousel-btn-prev">
         <i class="fas fa-chevron-left"></i>
       </button>
@@ -62,7 +62,7 @@
           </p>
         </div>
         <div class="image">
-          <a href="about.html" class="button">More about us</a>
+          <a href="publicPage/about.html" class="button">More about us</a>
         </div>
       </div>
       <section>
@@ -77,7 +77,7 @@
           <li>Web Development Bootcamp - July 20th, 2023</li>
           <li>Artificial Intelligence Applications - August 17th, 2023</li>
         </ul>
-        <a href="seminarForm.html" class="button">Book a seminar</a>
+        <a href="seminarForm.php" class="button">Book a seminar</a>
       </section>
 
       <section>
@@ -95,13 +95,20 @@
           <li>Catering services</li>
           <li>On-site technical support</li>
         </ul>
-        <a href="privateEventForm.html" class="button">Book a private event</a>
+        <a href="privateEventForm.php" class="button">Book a private event</a>
       </section>
     </main>
     <footer>
       <p>&copy; 2023 Techvent. All rights reserved.</p>
     </footer>
 
-    <script src="mainPage.js"></script>
+    <script src="publicPage/mainPage.js"></script>
+    <script>
+      document.getElementById("navProfilePic").innerHTML =
+'<a href="login.php">Login</a>';
+
+document.getElementById("logo").addEventListener("click", () => {
+window.location.href = "index.html";});
+    </script>
   </body>
 </html>

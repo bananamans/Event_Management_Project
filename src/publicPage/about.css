@@ -1,13 +1,14 @@
+
 body {
   background-color: #000 !important;
 }
 
 .image-container {
   height: 200px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0;
 }
 
 .animated-image {
@@ -24,10 +25,9 @@ body {
 
 .centered-text {
   text-align: center;
-  background-color: #0c0c0c;
-  margin-top: 30px;
+  background-color: black;
   margin-bottom: 0;
-  padding: 20px;
+  padding: 50px;
 }
 .shadow-text {
   color: #e4610a;
@@ -35,26 +35,30 @@ body {
 }
 .orange-text {
   color: #e4610a;
+  text-align: center;
+  margin-top: 60px;
 }
 .white-text {
   color: white;
+  text-align: center;
+ 
 }
 .container1 {
   margin-top: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 5px;
 }
 
 .section2 {
-  background-image: url(images/event1.jpg);
+  background-image: url(../images/event1.jpg);
   background-size: cover;
   background-position: center;
   padding: 20px;
   color: #000; /* Set text color for better visibility on the image */
 }
 .section3 {
-  background-image: url(images/event1.jpg);
+  background-image: url(../images/event1.jpg);
   background-size: cover;
   background-position: center;
   color: #000; /* Set text color for better visibility on the image */
@@ -65,25 +69,54 @@ body {
   box-sizing: border-box;
 }
 
+.column2 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.containerNews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
 .column:nth-child(odd) {
   background-color: #f2f2f2;
   padding: 20px;
-  background-image: url(images/Event2.png);
+  background-image: url(../images/Event2.png);
   background-size: cover;
   background-position: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin: 30px;
   color: #fff; /* Set text color for better visibility on the image */
 }
 
 .column:nth-child(even) {
   background-color: #e6e6e6;
   padding: 20px;
-  background-image: url(images/event3.jpg);
+  background-image: url(../images/event3.jpg);
   background-size: cover;
   background-position: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin: 30px;
   color: #fff; /* Set text color for better visibility on the image */
 }
 

@@ -1,11 +1,3 @@
-Loggedin = false;
-if (!Loggedin) {
-  document.getElementById("navProfilePic").innerHTML =
-    '<a href="login.html">Login</a>';
-}
-document.getElementById("logo").addEventListener("click", () => {
-  window.location.href = "index.html";
-});
 
 const validateNumber = (event) => {
   const keyCode = event.keyCode || event.which;
@@ -23,13 +15,13 @@ const validateNumber = (event) => {
 const validateContactNum = () => {
   var contactNumberInput = document.getElementById("contact-number");
   var contactNumber = contactNumberInput.value.trim();
-  if (contactNumber.length < 7 || contactNumber.length > 8) {
+  if (contactNumber.length < 9 || contactNumber.length > 10) {
     contactNumberInput.setCustomValidity(
-      "Contact number must be between 7-8 digit"
+      "Contact number must be between 9-10 digit"
     );
-  } else {
-    contactNumberInput.setCustomValidity("");
+    return false;
   }
+  return true;
 };
 
 const validateDates = () => {
@@ -41,11 +33,9 @@ const validateDates = () => {
 
   if (endDate < startDate) {
     endDateInput.setCustomValidity("End date cannot be before start date.");
-  } else {
-    endDateInput.setCustomValidity("");
+    return false;
   }
-
-  validateTimes();
+  return true;
 };
 
 const validateTimes = () => {
@@ -60,34 +50,20 @@ const validateTimes = () => {
   const startTime = startTimeInput.value;
   const endTime = endTimeInput.value;
 
-  if (!startTime || !endTime) {
-    return;
-  }
-
   if (startDate.getTime() === endDate.getTime() && endTime <= startTime) {
     endTimeInput.setCustomValidity("End time must be after start time.");
-  } else {
-    endTimeInput.setCustomValidity("");
+    return false;
   }
+  return true;
 };
 
-const validateName = () => {
-  const fullname = document.getElementById("fullname");
-  fullname.setCustomValidity("");
-};
-const validateVenue = () => {
-  const venue = document.getElementById("venue");
-  venue.setCustomValidity("");
-};
-
-const validateGuest = () => {
-  const guest = document.getElementById("guest");
-  guest.setCustomValidity("");
+const resetError = (id) => {
+  const inputField = document.getElementById(id);
+  inputField.setCustomValidity("");
 };
 
 const validateForm = (e) => {
-  //e.preventDefault();
-  const fullname = document.getElementById("fullname");
+  const eventname = document.getElementById("event-name");
   const contactNumber = document.getElementById("contact-number");
   const startDate = document.getElementById("start-date");
   const endDate = document.getElementById("end-date");
@@ -98,18 +74,14 @@ const validateForm = (e) => {
 
   let valid = true;
 
-  if (fullname.value.trim() === "") {
-    fullname.setCustomValidity("Please enter your full name.");
+  if (eventname.value.trim() === "") {
+    eventname.setCustomValidity("Please enter your event name.");
     valid = false;
-  } else {
-    fullname.setCustomValidity("");
   }
 
   if (contactNumber.value.trim() === "") {
     contactNumber.setCustomValidity("Please enter your contact number.");
     valid = false;
-  } else {
-    contactNumber.setCustomValidity("");
   }
 
   if (startDate.value.trim() === "") {
@@ -142,15 +114,11 @@ const validateForm = (e) => {
   if (venue.value.trim() === "") {
     venue.setCustomValidity("Please enter the venue.");
     valid = false;
-  } else {
-    venue.setCustomValidity("");
   }
 
   if (guest.value.trim() === "") {
     guest.setCustomValidity("Please enter the number of guests.");
     valid = false;
-  } else {
-    guest.setCustomValidity("");
   }
 
   const eventThemeOptions = document.querySelectorAll(
@@ -159,7 +127,6 @@ const validateForm = (e) => {
 
   if (eventThemeOptions.length !== 0) {
     let isEventThemeSelected = false;
-    const eventThemeGroup = document.getElementById("genderGroup");
 
     eventThemeOptions.forEach((option) => {
       if (option.checked) {
@@ -167,18 +134,19 @@ const validateForm = (e) => {
       }
     });
 
+    valid = isEventThemeSelected ? true : false;
+
     if (!isEventThemeSelected) {
-      eventThemeGroup.setCustomValidity("Please select an event theme.");
-      valid = false;
-    } else {
-      eventThemeGroup.setCustomValidity("");
-      valid = true;
+      const option = document.getElementById("wedding");
+      option.setCustomValidity("Please select one of these options");
+      return;
     }
   }
-  console.log("run");
-  if (valid && !Loggedin) {
-    e.preventDefault();
-    alert("Please log in first!");
-    window.location.assign("login.html");
+
+  if(valid){
+    valid = validateContactNum();
+    valid = validateDates();
+    valid = validateTimes();
   }
+  
 };
