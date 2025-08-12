@@ -1,0 +1,202 @@
+body {
+  background-color: #000 !important;
+}
+
+.image-container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.animated-image {
+  width: 13%;
+  height: 100px;
+  margin: 0 20px 10px 20px;
+  transition: all 0.3s ease-out;
+}
+
+.animated-image:hover {
+  width: 18%;
+  height: 150px;
+}
+
+.centered-text {
+  text-align: center;
+  background-color: #0c0c0c;
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding: 20px;
+}
+.shadow-text {
+  color: #e4610a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.orange-text {
+  color: #e4610a;
+}
+.white-text {
+  color: white;
+}
+.container1 {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.section2 {
+  background-image: url(images/event1.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: #000; /* Set text color for better visibility on the image */
+}
+.section3 {
+  background-image: url(images/event1.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #000; /* Set text color for better visibility on the image */
+}
+.column {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.column:nth-child(odd) {
+  background-color: #f2f2f2;
+  padding: 20px;
+  background-image: url(images/Event2.png);
+  background-size: cover;
+  background-position: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 30px;
+  color: #fff; /* Set text color for better visibility on the image */
+}
+
+.column:nth-child(even) {
+  background-color: #e6e6e6;
+  padding: 20px;
+  background-image: url(images/event3.jpg);
+  background-size: cover;
+  background-position: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 30px;
+  color: #fff; /* Set text color for better visibility on the image */
+}
+
+.video {
+  text-align: center;
+  color: #e4610a;
+}
+
+.tree {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #0c0c0c;
+  margin-top: 0;
+}
+.tree ul {
+  margin-top: 0;
+  padding-top: 20px;
+  position: relative;
+  transition: 0.5s;
+}
+.tree li {
+  display: inline-table;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 10px;
+  transition: 0.5s;
+}
+.tree li::before,
+.tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #faf7f7;
+  width: 51%;
+  height: 10px;
+}
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #faf7f7;
+}
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+.tree li:only-child {
+  padding-top: 0;
+}
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+.tree li:last-child::before {
+  border-right: 1px solid #faf7f7;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+.tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #faf7f7;
+  width: 0;
+  height: 20px;
+}
+.tree li a {
+  border: 1px solid #faf7f7;
+  padding: 10px;
+  display: inline-grid;
+  border-radius: 5px;
+  text-decoration-line: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.tree li a img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px !important;
+  border-radius: 50px;
+  margin: auto;
+}
+.tree li a span {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #666;
+  padding: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+/*Hover-Section*/
+.tree li a:hover,
+.tree li a:hover i,
+.tree li a:hover span,
+.tree li a:hover + ul li a {
+  background: #c8e4f8;
+  color: #000;
+  border: 1px solid #94a0b4;
+}
+.tree li a:hover + ul li::after,
+.tree li a:hover + ul li::before,
+.tree li a:hover + ul::before,
+.tree li a:hover + ul ul::before {
+  border-color: #94a0b4;
+}

@@ -1,0 +1,89 @@
+.FormCard {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  padding: 30px 30px 30px 60px;
+  max-width: 615px;
+  font-family: Arial, sans-serif;
+  font-size: mediun;
+}
+
+.FormCard > h1 {
+  color: #ff7400;
+  margin-bottom: 20px;
+}
+
+.FormCard > form > h2 {
+  color: #ff7400;
+  margin-bottom: 20px;
+}
+
+#grid-form {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.grid-item {
+  margin-bottom: 20px;
+}
+
+#fullname,
+#select-country,
+#contact-number,
+#start-date,
+#end-date,
+#start-time,
+#end-time,
+#venue,
+#budget {
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-bottom: 8px;
+  padding: 4px;
+  font-size: small;
+}
+
+#contact-number {
+  padding: 5px;
+}
+
+.services {
+  margin-bottom: 40px;
+}
+
+.service-title {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 0 5px 0;
+  font-size: large;
+}
+
+#select-box {
+  padding: 3px;
+  font-size: 15px;
+}
+
+#book-button {
+  margin-top: 0;
+}
+
+.small-space {
+  padding: 2px;
+}
+
+.submit {
+  font-size: medium;
+  padding: 8px 20px 8px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 7px;
+  background-color: #ff6b04;
+  color: white;
+}
+
+.submit:hover {
+  background-color: #cb5604;
+  cursor: pointer;
+}

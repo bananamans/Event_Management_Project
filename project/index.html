@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mainPage.css" />
+    <script
+      src="https://kit.fontawesome.com/c55c2b3c60.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>Techvent</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navLeft">
+        <img src="images/favicon.png" alt="logo" id="logo" />
+        <div class="navItem"><a href="index.html">Home</a></div>
+        <div class="navItem"><a href="search.html">Search</a></div>
+        <div class="navItem">
+          <a href="seminarForm.html">Booking</a>
+          <ul class="subMenu">
+            <li><a href="seminarForm.html" id="topItem">Seminar</a></li>
+            <li><a href="privateEventForm.html">Private Event</a></li>
+          </ul>
+        </div>
+        <div class="navItem"><a href="about.html">About</a></div>
+      </div>
+      <div class="navRight">
+        <div id="navProfilePic"></div>
+      </div>
+    </div>
+    <div class="breakSpace"></div>
+    <!-- content -->
+    <div class="carousel">
+      <img src="images/p1.jpg" class="carousel-image active" data-index="0" />
+      <img src="images/p2.jpg" class="carousel-image" data-index="1" />
+      <img src="images/p3.jpg" class="carousel-image" data-index="2" />
+      <button class="carousel-btn carousel-btn-prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-btn carousel-btn-next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="carousel-dots"></div>
+    </div>
+    <div id="my-element"></div>
+    <main>
+      <div class="container">
+        <div class="text">
+          <img
+            src="images/reservation.png"
+            alt="banner"
+            style="float: left; max-width: 50%; margin-bottom: 20px"
+          />
+          <h1>PLAN YOUR EVENT WITH TECHVENT</h1>
+          <p>
+            Providing you the best event management for your event of the year.
+          </p>
+        </div>
+        <div class="image">
+          <a href="about.html" class="button">More about us</a>
+        </div>
+      </div>
+      <section>
+        <img
+          src="images/click.png"
+          alt="banner"
+          style="float: right; margin-right: 100px; max-width: 20%"
+        />
+        <h2>Upcoming Seminars</h2>
+        <ul>
+          <li>Introduction to Machine Learning - June 15th, 2023</li>
+          <li>Web Development Bootcamp - July 20th, 2023</li>
+          <li>Artificial Intelligence Applications - August 17th, 2023</li>
+        </ul>
+        <a href="seminarForm.html" class="button">Book a seminar</a>
+      </section>
+
+      <section>
+        <img
+          src="images/event.png"
+          alt="banner"
+          style="float: right; margin-right: 100px; max-width: 20%"
+        />
+        <h2>Private Events</h2>
+        <p id="section-p">
+          Looking to host your own private event? Techvent can help!
+        </p>
+        <ul>
+          <li>State-of-the-art audio and video equipment</li>
+          <li>Catering services</li>
+          <li>On-site technical support</li>
+        </ul>
+        <a href="privateEventForm.html" class="button">Book a private event</a>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Techvent. All rights reserved.</p>
+    </footer>
+
+    <script src="mainPage.js"></script>
+  </body>
+</html>

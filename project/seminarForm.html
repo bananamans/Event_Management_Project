@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="eventForm.css" />
+    <title>Techvent</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navLeft">
+        <img src="images/favicon.png" alt="logo" id="logo" />
+        <div class="navItem"><a href="index.html">Home</a></div>
+        <div class="navItem"><a href="search.html">Search</a></div>
+        <div class="navItem">
+          <a href="seminarForm.html">Booking</a>
+          <ul class="subMenu">
+            <li><a href="seminarForm.html" id="topItem">Seminar</a></li>
+            <li><a href="privateEventForm.html">Private Event</a></li>
+          </ul>
+        </div>
+        <div class="navItem"><a href="about.html">About</a></div>
+      </div>
+      <div class="navRight">
+        <div id="navProfilePic"></div>
+      </div>
+    </div>
+    <div class="breakSpace"></div>
+    <!-- content -->
+    <div class="FormCard">
+      <h1>Book your SEMINAR here</h1>
+      <form class="event-form" id="event-form">
+        <div id="grid-form">
+          <div class="grid-item">
+            <label for="fullname">Full name</label><br />
+            <input
+              class="form-control"
+              type="text"
+              id="fullname"
+              oninput="validateName()"
+              required
+            />
+          </div>
+          <div class="grid-item">
+            <label>Contact number</label><br />
+            <select name="countryCode" id="select-country" required />
+            <option data-countryCode="MY" value="60">Malaysia (+60)</option>
+            <br />
+            <input
+              class="form-control"
+              type="text"
+              id="contact-number"
+              onkeypress="return validateNumber(event)"
+              oninput="validateContactNum()"
+              required
+            /><br />
+          </div>
+          <div class="grid-item">
+            <label>Start date</label><br />
+            <input
+              class="form-control"
+              type="date"
+              id="start-date"
+              onchange="validateDates()"
+              required
+            /><br />
+          </div>
+          <div class="grid-item">
+            <label>End date</label><br />
+            <input
+              class="form-control"
+              type="date"
+              id="end-date"
+              onchange="validateDates()"
+              required
+            /><br />
+          </div>
+          <div class="grid-item">
+            <label>Start time</label><br />
+            <input
+              class="form-control"
+              type="time"
+              id="start-time"
+              onchange="validateTimes()"
+              required
+            /><br />
+          </div>
+          <div class="grid-item">
+            <label>End time</label><br />
+            <input
+              class="form-control"
+              type="time"
+              id="end-time"
+              onchange="validateTimes()"
+              required
+            /><br />
+          </div>
+          <div class="grid-item">
+            <label>Venue</label><br />
+            <input
+              class="form-control"
+              type="text"
+              id="venue"
+              oninput="validateVenue()"
+              required
+            /><br />
+          </div>
+          <div class="grid-item">
+            <label>Number of guests</label><br />
+            <input
+              class="form-control"
+              type="text"
+              id="guest"
+              onkeypress="return validateNumber(event)"
+              oninput="validateGuest()"
+              required
+            /><br />
+          </div>
+        </div>
+
+        <h2>Services</h2>
+        <div class="services">
+          <p class="service-title">1. Decorations</p>
+          <input
+            type="checkbox"
+            id="flowers"
+            name="decorations[]"
+            value="flowers"
+          />
+          <label for="flowers">Flowers</label><br />
+          <input
+            type="checkbox"
+            id="balloons"
+            name="decorations[]"
+            value="balloons"
+          />
+          <label for="balloons">Balloons</label><br />
+          <input
+            type="checkbox"
+            id="streamers"
+            name="decorations[]"
+            value="streamers"
+          />
+          <label for="streamers">Streamers</label><br />
+          <input
+            type="checkbox"
+            id="lights"
+            name="decorations[]"
+            value="lights"
+          />
+          <label for="lights">Lights</label><br />
+        </div>
+
+        <div class="services">
+          <p class="service-title">2. Audio Visual (A/V) Rental</p>
+          <input
+            type="checkbox"
+            id="sound-system"
+            name="audio-visual[]"
+            value="sound-system"
+          />
+          <label for="sound-system">Sound system</label><br />
+          <input
+            type="checkbox"
+            id="lighting-design"
+            name="audio-visual[]"
+            value="lighting-design"
+          />
+          <label for="lighting-design">Lighting design</label><br />
+          <input
+            type="checkbox"
+            id="projector-and-screen"
+            name="audio-visual[]"
+            value="projector-and-screen"
+          />
+          <label for="projector-and-screen">Projector and screen</label><br />
+          <input
+            type="checkbox"
+            id="stage-setup"
+            name="audio-visual[]"
+            value="stage-setup"
+          />
+          <label for="stage-setup">Stage setup</label><br />
+        </div>
+        <div class="services">
+          <p class="service-title">3. Door Gifts</p>
+          <select name="door-gift" id="select-box">
+            <option value="">None</option>
+            <option value="notebooks">Notebooks</option>
+            <option value="pens">Pens</option>
+            <option value="candies">Candies</option>
+            <option value="bottles">Bottled water</option>
+          </select>
+        </div>
+
+        <div class="services">
+          <p class="service-title">4. Catering service</p>
+          <input type="checkbox" id="halal" name="catering[]" value="halal" />
+          <label for="halal">Halal</label><br />
+          <input
+            type="checkbox"
+            id="Vegetarian"
+            name="catering[]"
+            value="Vegetarian"
+          />
+          <label for="Vegetarian">Vegetarian</label><br />
+        </div>
+        <button
+          class="submit"
+          id="book-button"
+          type="submit"
+          onclick="validateForm(event)"
+        >
+          Book event
+        </button>
+      </form>
+    </div>
+    <script src="verifyForm.js"></script>
+  </body>
+</html>

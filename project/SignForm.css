@@ -1,0 +1,88 @@
+.signFormContainer {
+  margin: auto;
+  padding: 20px;
+  padding-bottom: 40px;
+  width: 30%;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+}
+
+.signFormContainer h1 {
+  margin-bottom: 40px;
+  margin-left: 40px;
+  color: #ff7400;
+}
+
+#login-form {
+  width: 80%;
+}
+
+.signForm {
+  font-size: large;
+  margin-left: 40px;
+}
+
+.signForm input[type="text"],
+.signForm input[type="password"],
+.signForm input[type="email"],
+.signForm select {
+  padding: 5px 0 5px 0;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 60%;
+  font-size: medium;
+  text-indent: 5px;
+}
+
+.submit {
+  font-size: medium;
+  padding: 8px 20px 8px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 7px;
+  background-color: #ff6b04;
+  color: white;
+}
+
+.submit:hover {
+  background-color: #cb5604;
+  cursor: pointer;
+}
+
+.loginInput {
+  height: 30px;
+  width: 100% !important;
+  text-indent: 10px !important;
+}
+
+.loginInput::placeholder {
+  font-size: medium;
+  color: #797474;
+  text-indent: 10px;
+}
+
+.login-button {
+  font-size: large;
+  padding: 10px 0 10px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff6b04;
+  color: white;
+  width: 100%;
+}
+
+.login-button:hover {
+  cursor: pointer;
+  background-color: #cb5604;
+}
+
+#create-account {
+  font-size: 16px;
+  color: #ff9e5b;
+}
+
+#create-account:hover {
+  color: #cf7d45;
+}

@@ -1,0 +1,128 @@
+body {
+  background-color: #dadcdc;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: x-large;
+}
+
+a:hover {
+  color: #928f8f;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#logo {
+  height: 15%;
+  width: 15%;
+  margin-right: 20px;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+.subMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subMenu > li > a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.subMenu > li > a:hover {
+  color: #928f8f;
+}
+
+.navItem:hover > .subMenu {
+  display: block;
+}
+
+#topItem {
+  margin-top: 10px;
+}
+
+.navItem {
+  position: relative;
+  margin-right: 10px;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#navProfilePic {
+  margin-right: 60px;
+}
+
+.breakSpace {
+  width: 100%;
+  height: 80px;
+}
+
+footer {
+  background-color: #0c0c0c;
+  color: #ff7400;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+footer ul li {
+  margin: 0 10px;
+}
+footer ul li:last-child {
+  margin-right: 0;
+}
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 748px) {
+  a {
+    font-size: medium;
+  }
+  .subMenu > li > a {
+    font-size: small;
+  }
+
+  .signUpForm form {
+    font-size: medium;
+  }
+}
